@@ -9,16 +9,34 @@
             InitializeComponent();
         }
 
-        private void OnCounterClicked(object? sender, EventArgs e)
+        private void PlayAgainButton_Clicked(object sender, EventArgs e)
         {
-            count++;
+            AnimalButtons.IsVisible = true;
+            PlayAgainButton.IsVisible = false;
 
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
+            List<string> animalEmoji = [
+                "🐕","🐕",
+                "🐈","🐈",
+                "🐅","🐅",
+                "🐟","🐟",
+                "🦒","🦒",
+                "🦛","🦛",
+                "🐊","🐊",
+                "🐘","🐘"
+                ];
 
-            SemanticScreenReader.Announce(CounterBtn.Text);
+            foreach (var button in AnimalButtons.Children.OfType<Button>())
+            { 
+                int index = Random.Shared.Next(animalEmoji.Count);
+                string nextEmoji = animalEmoji[index];
+                button.Text = nextEmoji;
+                animalEmoji.RemoveAt(index);
+            }
+        }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+
         }
     }
 }
