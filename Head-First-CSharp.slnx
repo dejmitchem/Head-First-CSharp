@@ -7,4 +7,7 @@
   </Project>
   <Project Path="MyFirstConsoleApp/MyFirstConsoleApp.csproj" Id="b059785d-c746-4ada-8f38-b5aa5430ac04" />
   <Project Path="PickRandomCards/PickRandomCards.csproj" Id="c2f60e24-8233-4869-b7af-67f21ba4cd07" />
+  <Project Path="PickRandomCardsMAUI/PickRandomCardsMAUI.csproj" Id="5173e1ca-1a50-46f8-9bec-9fe037989eac">
+    <Deploy Solution="Debug|*" />
+  </Project>
 </Solution>
