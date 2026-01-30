@@ -5,6 +5,7 @@
   <Project Path="ExperimentWithControls/ExperimentWithControls.csproj" Id="4c486372-4fec-4fa7-aecc-4a56ea46543a">
     <Deploy Solution="Debug|*" />
   </Project>
+  <Project Path="Guys/Guys.csproj" Id="dc954217-2841-450d-a3af-9f4a1e9e148b" />
   <Project Path="MyFirstConsoleApp/MyFirstConsoleApp.csproj" Id="b059785d-c746-4ada-8f38-b5aa5430ac04" />
   <Project Path="PickRandomCards/PickRandomCards.csproj" Id="c2f60e24-8233-4869-b7af-67f21ba4cd07" />
   <Project Path="PickRandomCardsMAUI/PickRandomCardsMAUI.csproj" Id="5173e1ca-1a50-46f8-9bec-9fe037989eac">

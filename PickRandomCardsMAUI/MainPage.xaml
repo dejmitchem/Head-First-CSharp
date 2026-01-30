@@ -16,7 +16,7 @@
             
             <Button x:Name="PickCardsButton" Text="Pick some cards" Clicked="PickCardsButton_Clicked" />
 
-            <Label x:Name="PickedCards" Text="" Padding="20" TextColor="White" 
+            <Label x:Name="PickedCards" Text="" Padding="20,0,20,20" TextColor="White" 
                    BackgroundColor="DarkBlue"/>
 
         </VerticalStackLayout>

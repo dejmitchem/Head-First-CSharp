@@ -18,14 +18,12 @@ namespace PickRandomCardsMAUI
                 {
                     PickedCards.Text += card + Environment.NewLine;
                 }
+                PickedCards.Text += "You Picked " + numberOfCardsInt + " cards.";
             }
         
             else { 
                 PickedCards.Text = "Please enter a valid number.";
             }
-            
-            
-
         }
     }
 }
