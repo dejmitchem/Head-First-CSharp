@@ -2,6 +2,7 @@
   <Project Path="AnimalMatchingGame/AnimalMatchingGame.csproj">
     <Deploy Solution="Debug|*" />
   </Project>
+  <Project Path="BettingGame/BettingGame.csproj" Id="ca09caa0-bb10-4d43-9815-3d618b2c5493" />
   <Project Path="ExperimentWithControls/ExperimentWithControls.csproj" Id="4c486372-4fec-4fa7-aecc-4a56ea46543a">
     <Deploy Solution="Debug|*" />
   </Project>
