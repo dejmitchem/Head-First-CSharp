@@ -1,4 +1,5 @@
 <Solution>
+  <Project Path="AbilityScore/AbilityScore.csproj" Id="1bd0d190-5f7a-44d9-a903-2353f4c42672" />
   <Project Path="AnimalMatchingGame/AnimalMatchingGame.csproj">
     <Deploy Solution="Debug|*" />
   </Project>
@@ -12,4 +13,5 @@
   <Project Path="PickRandomCardsMAUI/PickRandomCardsMAUI.csproj" Id="5173e1ca-1a50-46f8-9bec-9fe037989eac">
     <Deploy Solution="Debug|*" />
   </Project>
+  <Project Path="Short Test File/Short Test File.csproj" Id="3f13c607-aac2-4e44-b971-6ebc68b4cf58" />
 </Solution>
