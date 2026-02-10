@@ -17,6 +17,8 @@ while (true) {
         lucinda.WhoAmI();
     else if (key == '3')
         SwapRefernces();
+    else if (key == '5')
+        lucinda.SpeakTo(lloyd, "Hi Lloyd");
     else
         Console.WriteLine("Invalid key" );
 
