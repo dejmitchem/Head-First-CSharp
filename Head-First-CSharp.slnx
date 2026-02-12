@@ -8,6 +8,9 @@
   <Project Path="ExperimentWithControls/ExperimentWithControls.csproj" Id="4c486372-4fec-4fa7-aecc-4a56ea46543a">
     <Deploy Solution="Debug|*" />
   </Project>
+  <Project Path="GridExample/GridExample.csproj" Id="13444d3f-e1a6-4c60-9d57-b7003b3f2c24">
+    <Deploy Solution="Debug|*" />
+  </Project>
   <Project Path="Guys/Guys.csproj" Id="dc954217-2841-450d-a3af-9f4a1e9e148b" />
   <Project Path="MyFirstConsoleApp/MyFirstConsoleApp.csproj" Id="b059785d-c746-4ada-8f38-b5aa5430ac04" />
   <Project Path="PickRandomCards/PickRandomCards.csproj" Id="c2f60e24-8233-4869-b7af-67f21ba4cd07" />
@@ -15,4 +18,5 @@
     <Deploy Solution="Debug|*" />
   </Project>
   <Project Path="Short Test File/Short Test File.csproj" Id="3f13c607-aac2-4e44-b971-6ebc68b4cf58" />
+  <Project Path="TestingTheRandomClass/TestingTheRandomClass.csproj" Id="31e1de91-5be0-4525-bd15-74184345e185" />
 </Solution>
