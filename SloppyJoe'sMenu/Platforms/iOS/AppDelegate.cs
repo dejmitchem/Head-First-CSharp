@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace SloppyJoe_sMenu
+namespace SloppyJoes
 {
     [Register("AppDelegate")]
     public class AppDelegate : MauiUIApplicationDelegate

@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace SloppyJoe_sMenu
+namespace SloppyJoes
 {
     public class Program
     {

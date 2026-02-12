@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SloppyJoes
+namespace SloppyJoe
 {
     internal class MenuItem
     {
@@ -24,7 +24,7 @@ namespace SloppyJoes
         public void Generate()
         {
             int[] values = [0, 0, 0];
-            for(int i = 0; i < 3; i++)
+            for (int i = 0; i < 3; i++)
                 values[i] = Random.Shared.Next(0, 6);
 
             Description = $"{Proteins[values[0]]} with {Condiments[values[1]]} on {Breads[values[2]]}";
@@ -37,3 +37,4 @@ namespace SloppyJoes
         }
     }
 }
+
