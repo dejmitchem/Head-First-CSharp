@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 
-namespace SloppyJoes
+namespace SloppyJoe_sMenu
 {
     public static class MauiProgram
     {

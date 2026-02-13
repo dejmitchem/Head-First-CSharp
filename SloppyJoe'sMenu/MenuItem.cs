@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SloppyJoes
+namespace SloppyJoe_sMenu
 {
     internal class MenuItem
     {

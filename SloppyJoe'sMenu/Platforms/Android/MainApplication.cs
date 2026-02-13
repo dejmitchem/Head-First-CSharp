@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Runtime;
 
-namespace SloppyJoes
+namespace SloppyJoe_sMenu
 {
     [Application]
     public class MainApplication : MauiApplication

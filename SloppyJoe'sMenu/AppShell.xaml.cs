@@ -1,4 +1,4 @@
-﻿namespace SloppyJoes
+﻿namespace SloppyJoe_sMenu
 {
     public partial class AppShell : Shell
     {

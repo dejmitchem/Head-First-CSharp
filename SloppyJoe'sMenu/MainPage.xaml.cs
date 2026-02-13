@@ -1,5 +1,5 @@
 ﻿
-namespace SloppyJoes;
+namespace SloppyJoe_sMenu;
 
 public partial class MainPage : ContentPage
 {
