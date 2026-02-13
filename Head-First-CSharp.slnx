@@ -18,7 +18,7 @@
     <Deploy Solution="Debug|*" />
   </Project>
   <Project Path="Short Test File/Short Test File.csproj" Id="3f13c607-aac2-4e44-b971-6ebc68b4cf58" />
-  <Project Path="SloppyJoe'sMenu/SloppyJoe'sMenu.csproj" Id="0ecca780-ccb1-4dfc-9444-704eadb7d5d2">
+  <Project Path="SloppyJoe/SloppyJoe.csproj" Id="9570e0f0-f4cb-4cf3-878f-9d175d891d69">
     <Deploy Solution="Debug|*" />
   </Project>
   <Project Path="TestingTheRandomClass/TestingTheRandomClass.csproj" Id="31e1de91-5be0-4525-bd15-74184345e185" />
