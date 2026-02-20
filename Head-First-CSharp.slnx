@@ -13,6 +13,7 @@
     <Deploy Solution="Debug|*" />
   </Project>
   <Project Path="Guys/Guys.csproj" Id="dc954217-2841-450d-a3af-9f4a1e9e148b" />
+  <Project Path="Hi-Lo Game/Hi-Lo Game.csproj" Id="6b497a29-9048-453e-b8f4-5120d4d568c2" />
   <Project Path="MAUIDamageCalculator/MAUIDamageCalculator.csproj" Id="0e86b0f1-2e9f-4039-b409-f32a80ee3237">
     <Deploy Solution="Debug|*" />
   </Project>
