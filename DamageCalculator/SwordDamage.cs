@@ -8,30 +8,72 @@ namespace DamageCalculator
     {
         public const int BASE_DAMAGE = 3;
         public const int FLAME_DAMAGE = 2;
+        private int roll;
+        private bool flaming;
+        private bool magic;
 
-        public int Roll;
-        public decimal MagicMultiplier = 1M;
-        public int Damage;
-
-        public void CalculateDamage()
+        public SwordDamage(int roll)
         {
-            Damage = (int)(Roll * MagicMultiplier) + BASE_DAMAGE;
+            this.roll = roll;
         }
 
-        public void SetMagic(bool isMagic)
+        public int Damage { get; private set; }
+        public int Roll
         {
-            if (isMagic)
-                MagicMultiplier = 1.75M;
+            get
+            {
+                return roll;
+            }
+            set
+            {
+                roll = value;
+                CalculateDamage();
+            }
+        }
+
+        private void CalculateDamage()
+        {
+            if (Magic)
+            {
+                Damage = (int)(Roll * 1.75) + BASE_DAMAGE;
+
+            }
             else
-                MagicMultiplier = 1M;
-            CalculateDamage();
+            {
+                Damage = Roll + BASE_DAMAGE;
+            }
+
+            if (Flaming)
+            {
+                Damage += FLAME_DAMAGE;
+            }
+
+        }
+        public bool Magic
+        {
+            get
+            {
+                return magic;
+            }
+            set
+            {
+                magic = value;
+                CalculateDamage();
+            }
         }
 
-        public void SetFlaming(bool isFlaming)
+        public bool Flaming
         {
-            CalculateDamage();
-            if (isFlaming)
-                Damage += FLAME_DAMAGE;
+            get
+            {
+                return flaming;
+            }
+
+            set
+            {
+                flaming = value;
+                CalculateDamage();
+            }
         }
     }
 }

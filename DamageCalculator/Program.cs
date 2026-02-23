@@ -4,7 +4,7 @@ DamageInterface();
 
 void DamageInterface()
 {
-    SwordDamage longsword = new SwordDamage();
+    SwordDamage longsword = new SwordDamage(RollDice());
 
 
     while (true)
@@ -15,20 +15,22 @@ void DamageInterface()
         longsword.Roll = Random.Shared.Next(1, 7) + Random.Shared.Next(1, 7) + Random.Shared.Next(1, 7);
 
         if (input == '0')
-            longsword.SetMagic(false);
-
+        {
+            longsword.Magic = false;
+            longsword.Flaming = false;
+        }
         else if (input == '1')
-            longsword.SetMagic(true);
+            longsword.Magic = true;
 
         else if (input == '2')
         {
-            longsword.SetMagic(false);
-            longsword.SetFlaming(true);
+            longsword.Magic = false;
+            longsword.Flaming = true;
         }
         else if (input == '3')
         {
-            longsword.SetMagic(true);
-            longsword.SetFlaming(true);
+            longsword.Magic = true;
+            longsword.Flaming = true;
         }
         else
             return;
@@ -37,4 +39,9 @@ void DamageInterface()
 
 
     }
+}
+
+int RollDice()
+{
+    return Random.Shared.Next(1, 7) + Random.Shared.Next(1, 7) + Random.Shared.Next(1, 7);
 }

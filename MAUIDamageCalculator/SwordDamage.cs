@@ -1,41 +1,79 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using System.Diagnostics;
 
-namespace MAUIDamageCalculator
+namespace DamageCalculator
 {
     internal class SwordDamage
     {
         public const int BASE_DAMAGE = 3;
         public const int FLAME_DAMAGE = 2;
+        private int roll;
+        private bool flaming;
+        private bool magic;
 
-        public int Roll;
-        public decimal MagicMultiplier = 1M;
-        public int Damage;
-
-        public void CalculateDamage()
+        public SwordDamage(int roll)
         {
-            Damage = (int)(Roll * MagicMultiplier) + BASE_DAMAGE;
-            Debug.WriteLine($"CalculateDamage set Damage to: {Damage} (Roll: {Roll}");
+            this.roll = roll;
+        }
+        
+        public int Damage { get; private set; }
+        public int Roll
+        {
+            get
+            {
+                return roll;
+            }
+            set
+            {
+                roll = value;
+                CalculateDamage();
+            }
         }
 
-        public void SetMagic(bool isMagic)
+        private void CalculateDamage()
         {
-            if (isMagic)
-                MagicMultiplier = 1.75M;
+            if (Magic)
+            {
+                Damage = (int)(Roll * 1.75) + BASE_DAMAGE;
+
+            }
             else
-                MagicMultiplier = 1M;
-            CalculateDamage();
-            Debug.WriteLine($"SetMagic set Damage to: {Damage} (Roll: {Roll}");
+            {
+                Damage = Roll + BASE_DAMAGE;
+            }
+
+            if (Flaming)
+            {
+                Damage += FLAME_DAMAGE;
+            }
+            
+        }
+        public bool Magic
+        {
+            get
+            {
+                return magic;
+            }
+            set
+            {
+                magic = value;
+                CalculateDamage();
+            }
         }
 
-        public void SetFlaming(bool isFlaming)
+        public bool Flaming
         {
-            CalculateDamage();
-            if (isFlaming)
-                Damage += FLAME_DAMAGE;
-            Debug.WriteLine($"SetFlaming set Damage to: {Damage} (Roll: {Roll}");
+            get
+            {
+                return flaming;
+            }
+
+            set
+            {
+                flaming = value;
+                CalculateDamage();
+            }
         }
     }
 }
