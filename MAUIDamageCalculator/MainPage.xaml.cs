@@ -2,24 +2,16 @@
 {
     public partial class MainPage : ContentPage
     {
-        SwordDamage swordDamage = new SwordDamage();
+        SwordDamage swordDamage = new SwordDamage(3);
 
         public MainPage()
         {
             InitializeComponent();
-            swordDamage.SetMagic(Magic.IsChecked);
-            swordDamage.SetFlaming(Flaming.IsChecked);
+            swordDamage.Magic = Magic.IsChecked;
+            swordDamage.Flaming = Flaming.IsChecked;
             RollDice();
         }
 
-        private void RollDice()
-        {
-            swordDamage.Roll = Random.Shared.Next(1, 7) + Random.Shared.Next(1, 7)
-                + Random.Shared.Next(1,7);
-            swordDamage.SetMagic(Magic.IsChecked);
-            swordDamage.SetFlaming(Flaming.IsChecked);
-            DisplayDamage();
-        }
 
         private void DisplayDamage()
         {
@@ -28,20 +20,26 @@
 
         private void Flaming_CheckedChanged(object sender, CheckedChangedEventArgs e)
         {
-            swordDamage.SetFlaming(e.Value);
+            swordDamage.Flaming = e.Value;
             DisplayDamage();
         }
 
         private void Magic_CheckedChanged(object sender, CheckedChangedEventArgs e)
         {
-            swordDamage.SetMagic(e.Value);
-            swordDamage.SetFlaming(Flaming.IsChecked);
+            swordDamage.Magic = e.Value;
+            swordDamage.Flaming = Flaming.IsChecked;
             DisplayDamage();
         }
 
         private void Button_Clicked(object sender, EventArgs e)
         {
             RollDice();
+        }
+
+        private void RollDice()
+        {
+            swordDamage.Roll = Random.Shared.Next(1, 7) + Random.Shared.Next(1, 7);
+            DisplayDamage();
         }
 
     }

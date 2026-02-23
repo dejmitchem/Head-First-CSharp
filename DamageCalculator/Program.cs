@@ -1,4 +1,4 @@
-﻿using DamageCalculator;
+﻿using DamagMAUIDamageCalculatoreCalculator;
 
 DamageInterface();
 
