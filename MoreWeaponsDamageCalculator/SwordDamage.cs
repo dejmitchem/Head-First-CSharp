@@ -6,8 +6,9 @@ namespace MoreWeaponsDamageCalculator;
 
 internal class SwordDamage
 {
-    public const int BASE_DAMAGE = 3;
-    public const int FLAME_DAMAGE = 2;
+    private const int BASE_DAMAGE = 3;
+    private const decimal MAGIC_MULTIPLIER = 1.75M;
+    private const int FLAME_DAMAGE = 2;
     private int roll;
     private bool flaming;
     private bool magic;
@@ -35,7 +36,7 @@ internal class SwordDamage
     {
         if (Magic)
         {
-            Damage = (int)(Roll * 1.75) + BASE_DAMAGE;
+            Damage = (int)(Roll * MAGIC_MULTIPLIER) + BASE_DAMAGE;
 
         }
         else

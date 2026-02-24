@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace MAUIDamageCalculator
+namespace MoreWeaponsDamageCalculator
 {
     [Register("AppDelegate")]
     public class AppDelegate : MauiUIApplicationDelegate

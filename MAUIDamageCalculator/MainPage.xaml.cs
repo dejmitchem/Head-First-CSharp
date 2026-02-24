@@ -1,4 +1,4 @@
-﻿namespace MAUIDamageCalculator
+﻿namespace MoreWeaponsDamageCalculator
 {
     public partial class MainPage : ContentPage
     {

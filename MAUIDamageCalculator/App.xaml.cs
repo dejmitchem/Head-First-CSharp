@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 
-namespace MAUIDamageCalculator
+namespace MoreWeaponsDamageCalculator
 {
     public partial class App : Application
     {

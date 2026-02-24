@@ -4,19 +4,20 @@ using System.Text;
 
 namespace MoreWeaponsDamageCalculator;
 
-internal class SwordDamage
+internal class ArrowDamage
 {
-    public const int BASE_DAMAGE = 3;
-    public const int FLAME_DAMAGE = 2;
+    private const decimal BASE_MULTIPLIER = 0.35M;
+    private const decimal MAGIC_MULTIPLIER = 1.75M;
+    private const decimal FLAME_DAMAGE = 1.25M;
     private int roll;
     private bool flaming;
     private bool magic;
 
-    public SwordDamage(int roll)
+    public ArrowDamage(int roll)
     {
         this.roll = roll;
     }
-    
+
     public int Damage { get; private set; }
     public int Roll
     {
@@ -33,21 +34,10 @@ internal class SwordDamage
 
     private void CalculateDamage()
     {
-        if (Magic)
-        {
-            Damage = (int)(Roll * 1.75) + BASE_DAMAGE;
-
-        }
-        else
-        {
-            Damage = Roll + BASE_DAMAGE;
-        }
-
-        if (Flaming)
-        {
-            Damage += FLAME_DAMAGE;
-        }
-        
+        decimal baseDamage = Roll * BASE_MULTIPLIER;
+        if (Magic) baseDamage *= MAGIC_MULTIPLIER;
+        if (Flaming) Damage = (int)Math.Ceiling(baseDamage + FLAME_DAMAGE);
+        else Damage = (int) Math.Ceiling(baseDamage);
     }
     public bool Magic
     {

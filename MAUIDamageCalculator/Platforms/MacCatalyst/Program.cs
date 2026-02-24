@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace MAUIDamageCalculator
+namespace MoreWeaponsDamageCalculator
 {
     public class Program
     {

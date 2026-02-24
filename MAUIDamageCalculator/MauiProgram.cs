@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 
-namespace MAUIDamageCalculator
+namespace MoreWeaponsDamageCalculator
 {
     public static class MauiProgram
     {
