@@ -4,6 +4,7 @@
     <Deploy Solution="Debug|*" />
   </Project>
   <Project Path="BettingGame/BettingGame.csproj" Id="ca09caa0-bb10-4d43-9815-3d618b2c5493" />
+  <Project Path="BirdInheritancePractice/BirdInheritancePractice.csproj" Id="e77c66b3-b60d-40e8-a45c-8241cdb75178" />
   <Project Path="DamageCalculator/DamageCalculator.csproj" Id="55d05aa8-1624-4464-8563-e89c42fa2cca" />
   <Project Path="ElephantObjects/ElephantObjects.csproj" Id="69f40a59-42ac-4982-a024-86d4b97c6da3" />
   <Project Path="ExperimentWithControls/ExperimentWithControls.csproj" Id="4c486372-4fec-4fa7-aecc-4a56ea46543a">
