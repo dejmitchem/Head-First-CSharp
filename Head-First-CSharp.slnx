@@ -10,6 +10,7 @@
   <Project Path="ExperimentWithControls/ExperimentWithControls.csproj" Id="4c486372-4fec-4fa7-aecc-4a56ea46543a">
     <Deploy Solution="Debug|*" />
   </Project>
+  <Project Path="FinalWeaponDamageCalculator/FinalWeaponDamageCalculator.csproj" Id="49ad3018-7591-4cbc-8f82-c80e4b95475f" />
   <Project Path="GridExample/GridExample.csproj" Id="13444d3f-e1a6-4c60-9d57-b7003b3f2c24">
     <Deploy Solution="Debug|*" />
   </Project>
