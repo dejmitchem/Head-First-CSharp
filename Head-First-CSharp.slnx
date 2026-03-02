@@ -32,4 +32,7 @@
     <Deploy Solution="Debug|*" />
   </Project>
   <Project Path="TestingTheRandomClass/TestingTheRandomClass.csproj" Id="31e1de91-5be0-4525-bd15-74184345e185" />
+  <Project Path="TheBeeHiveManagementSystem/TheBeeHiveManagementSystem.csproj" Id="dad4d3c4-7617-4be9-b968-64db80c594dd">
+    <Deploy Solution="Debug|*" />
+  </Project>
 </Solution>
