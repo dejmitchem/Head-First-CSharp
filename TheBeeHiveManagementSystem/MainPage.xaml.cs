@@ -2,7 +2,7 @@
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
+        private Queen queen = new Queen();
 
         public MainPage()
         {
@@ -13,22 +13,41 @@
                 "Honey Manufacturer",
                 "Egg Care",
             };
+            JobPicker.SelectedIndex = 0;
 
+            UpdateStatusAndEnableAssignButton();
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        private void UpdateStatusAndEnableAssignButton()
         {
-
+            StatusReport.Text = queen.StatusReport;
+            AssignJobButton.IsEnabled = queen.CanAssignWorkers;
         }
 
         private void WorkShiftButton_Clicked(object sender, EventArgs e)
         {
+            if (!queen.WorkTheNextShift())
+            {
+                WorkShiftButton.IsVisible = false;
+                OutOfHoneyButton.IsVisible = true;
+            }
 
+            UpdateStatusAndEnableAssignButton();
+        }
+
+        private void AssignJobButton_Clicked(object sender, EventArgs e)
+        {
+            queen.AssignBee(JobPicker.SelectedItem.ToString());
+            UpdateStatusAndEnableAssignButton();
         }
 
         private void OutOfHoneyButton_Clicked(object sender, EventArgs e)
         {
-
+            HoneyVault.Reset();
+            queen = new Queen();
+            WorkShiftButton.IsVisible = true;
+            OutOfHoneyButton.IsVisible = false;
+            UpdateStatusAndEnableAssignButton();
         }
     }
 }

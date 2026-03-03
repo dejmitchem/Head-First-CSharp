@@ -22,7 +22,7 @@
             <VerticalStackLayout Grid.Row="1">
                 <Label Text="Bee Jobs" FontSize="Medium" />
                 <Picker x:Name="JobPicker" Margin="0,20,0,20" FontSize="Medium"/>
-                <Button Text="Assign this job to a bee" FontSize="Medium" Clicked="Button_Clicked" />
+                <Button x:Name="AssignJobButton" Text="Assign this job to a bee" FontSize="Medium" Clicked="AssignJobButton_Clicked" />
             </VerticalStackLayout>
 
             <Button x:Name="WorkShiftButton"  Text="Work the next shift" FontSize="Large" Grid.Row="2" 
