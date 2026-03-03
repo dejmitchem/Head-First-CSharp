@@ -16,6 +16,16 @@
             JobPicker.SelectedIndex = 0;
 
             UpdateStatusAndEnableAssignButton();
+
+            Dispatcher.StartTimer(TimeSpan.FromSeconds(1.5), TimerTick);
+        }
+
+        private bool TimerTick()
+        {
+            if (!this.IsLoaded || !WorkShiftButton.IsVisible) return false;
+
+            WorkShiftButton_Clicked(this, new EventArgs());
+            return true;
         }
 
         private void UpdateStatusAndEnableAssignButton()
