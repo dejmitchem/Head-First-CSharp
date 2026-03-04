@@ -18,7 +18,7 @@ namespace ClownInterfaces
         public void ScareLittleChildren()
         {
             Console.WriteLine($"Boo! Gotcha! Look at my {ScaryThingIHave}!");
-        }.
+        }
 
     }
 }
