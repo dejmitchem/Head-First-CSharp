@@ -5,7 +5,7 @@ using System.Text;
 
 namespace FinalWeaponDamageCalculator
 {
-    class WeaponDamage
+    abstract class WeaponDamage
     {
         int roll;
         bool magic;
@@ -45,6 +45,6 @@ namespace FinalWeaponDamageCalculator
             CalculateDamage();
         }
 
-        protected virtual void CalculateDamage() { }
+        protected abstract void CalculateDamage();
     }
 }

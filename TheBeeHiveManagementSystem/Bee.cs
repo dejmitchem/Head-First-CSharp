@@ -4,9 +4,9 @@ using System.Text;
 
 namespace TheBeeHiveManagementSystem
 {
-    class Bee
+    abstract class Bee
     {
-        public virtual decimal CostPerShift { get; }
+        public abstract decimal CostPerShift { get; }
         public string Job { get; private set; }
         
         public Bee(string job)
