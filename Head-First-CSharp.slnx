@@ -5,6 +5,7 @@
   </Project>
   <Project Path="BettingGame/BettingGame.csproj" Id="ca09caa0-bb10-4d43-9815-3d618b2c5493" />
   <Project Path="BirdInheritancePractice/BirdInheritancePractice.csproj" Id="e77c66b3-b60d-40e8-a45c-8241cdb75178" />
+  <Project Path="ClownInterfaces/ClownInterfaces.csproj" Id="904b193b-8d1b-4f21-a829-a61712663082" />
   <Project Path="DamageCalculator/DamageCalculator.csproj" Id="55d05aa8-1624-4464-8563-e89c42fa2cca" />
   <Project Path="ElephantObjects/ElephantObjects.csproj" Id="69f40a59-42ac-4982-a024-86d4b97c6da3" />
   <Project Path="ExperimentWithControls/ExperimentWithControls.csproj" Id="4c486372-4fec-4fa7-aecc-4a56ea46543a">
@@ -18,6 +19,7 @@
   <Project Path="HeistInheritancePractice/HeistInheritancePractice.csproj" Id="7c5a6264-08d0-4c7c-a479-ca4741f0b19f" />
   <Project Path="Hi-Lo Game/Hi-Lo Game.csproj" Id="6b497a29-9048-453e-b8f4-5120d4d568c2" />
   <Project Path="Interface Practice/Interface Practice.csproj" Id="007c5e70-1422-4ac0-84c6-2f125f47d75d" />
+  <Project Path="IsStatementPractice/IsStatementPractice.csproj" Id="dbdd4e78-ad54-4937-9340-78d417873e3e" />
   <Project Path="MAUIDamageCalculator/MAUIDamageCalculator.csproj" Id="0e86b0f1-2e9f-4039-b409-f32a80ee3237">
     <Deploy Solution="Debug|*" />
   </Project>

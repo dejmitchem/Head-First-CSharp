@@ -7,7 +7,7 @@ namespace TheBeeHiveManagementSystem
 {
     class Queen : Bee
     {
-        private Bee[] workers = [];
+        private IWorker[] workers = [];
         private decimal eggs;
         private decimal unnasignedWorkers;
         private bool missingWork;
@@ -41,7 +41,7 @@ namespace TheBeeHiveManagementSystem
             return base.WorkTheNextShift();
         }
 
-        private void AddWorker(Bee worker)
+        private void AddWorker(IWorker worker)
         {
             if (unnasignedWorkers >= 1)
             {

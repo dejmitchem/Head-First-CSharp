@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TheBeeHiveManagementSystem
 {
-    abstract class Bee
+    abstract class Bee : IWorker
     {
         public abstract decimal CostPerShift { get; }
         public string Job { get; private set; }
