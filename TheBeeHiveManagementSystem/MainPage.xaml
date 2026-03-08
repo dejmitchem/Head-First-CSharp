@@ -5,34 +5,51 @@
 
     <ScrollView>
         <Grid Margin="20" ColumnSpacing="20" MinimumHeightRequest="400">
-            
             <Grid.RowDefinitions>
-                <RowDefinition/>
+                <RowDefinition Height="1*"/>
                 <RowDefinition Height="3*"/>
                 <RowDefinition Height="2*"/>
             </Grid.RowDefinitions>
-
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
-            <Label Text="Job Assignments" FontSize="Large"/>
-            <Label Text="Queen's Report" FontSize="Large" Grid.Column="1"/>
-            <VerticalStackLayout Grid.Row="1">
-                <Label Text="Bee Jobs" FontSize="Medium" />
-                <Picker x:Name="JobPicker" Margin="0,20,0,20" FontSize="Medium"/>
-                <Button x:Name="AssignJobButton" Text="Assign this job to a bee" FontSize="Medium" Clicked="AssignJobButton_Clicked" />
-            </VerticalStackLayout>
+            <Label Text="Job Assignments" FontSize="Large" />
 
-            <Button x:Name="WorkShiftButton"  Text="Work the next shift" FontSize="Large" Grid.Row="2" 
-                    Clicked="WorkShiftButton_Clicked"/>
-            <Button x:Name="OutOfHoneyButton"  Text="The hive is out of honey" FontSize="Large" Grid.Row="2"
-                    BackgroundColor="Red" IsVisible="False" Clicked="OutOfHoneyButton_Clicked"/>
+            <Border Grid.Row="1" Padding="10" Margin="0,0,0,20" >
+                <VerticalStackLayout>
 
-            <Label x:Name="StatusReport" Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" BackgroundColor="Black" TextColor="Yellow" Padding="10" VerticalOptions="FillAndExpand"/>
+                    <Label Text="Bee Jobs" FontSize="Medium"/>
+                    <Picker x:Name="JobPicker"
+                            FontSize="Medium" Margin="0,0,0,20"
+                            SemanticProperties.Hint="Lets the user pick a job to assign" />
 
-        </Grid> 
+                    <Button x:Name="AssignJobButton" Text="Assign this job to a bee" 
+                            FontSize="Medium" Clicked="AssignJobButton_Clicked" 
+                            SemanticProperties.Hint="Assigns the job to a worker bee" 
+                            IsEnabled="{Binding CanAssignWorkers}" />
+
+                </VerticalStackLayout>
+            </Border>
+
+            <Button x:Name="WorkShiftButton" Grid.Row="2" Text="Work the next shift" 
+                    FontSize="Large" Clicked="WorkShiftButton_Clicked"
+                    SemanticProperties.Hint="Makes the bees work the next shift" 
+                    IsVisible="{Binding HiveIsRunning}" />
+
+            <Button x:Name="OutOfHoneyButton" Grid.Row="2" Text="The hive is out of honey" 
+                    BackgroundColor="Red" FontSize="Large" IsVisible="{Binding OutOfHoney}" 
+                    Clicked="OutOfHoneyButton_Clicked"
+                    SemanticProperties.Hint="Restarts the Beehive Management System" />
+
+            <Label Text="Queen's Report" Grid.Column="1" FontSize="Large"  />
+
+            <Label x:Name="StatusReport" Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" 
+                   VerticalOptions="FillAndExpand" FontSize="Small" 
+                   BackgroundColor="Black" TextColor="Yellow" Padding="10"
+                   Text="{Binding StatusReport}" />
+        </Grid>
     </ScrollView>
 
 </ContentPage>

@@ -1,19 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 
 namespace TheBeeHiveManagementSystem
 {
-    class Queen : Bee
+    class Queen : Bee, INotifyPropertyChanged
     {
-        private IWorker[] workers = [];
+        private IWorker[] workers = new IWorker[0];
         private decimal eggs;
         private decimal unnasignedWorkers;
         private bool missingWork;
-        public string StatusReport;
-        public bool CanAssignWorkers;
+        /// <summary>
+        /// Status report text shown in the UI. This is a property so it can be used
+        /// as a binding target from XAML.
+        /// </summary>
+        public string StatusReport { get; private set; }
 
+        /// <summary>
+        /// Indicates whether the UI should enable the "Assign" button. Exposed as
+        /// a property so it can be bound to the UI and notify on change.
+        /// </summary>
+        public bool CanAssignWorkers { get; private set; }
+        public bool HiveIsRunning {  get; set; } = true;
+        public bool OutOfHoney { get { return !HiveIsRunning; } }
+
+        public event PropertyChangedEventHandler? PropertyChanged;
 
         public Queen() : base("Queen") 
         {
@@ -22,6 +35,11 @@ namespace TheBeeHiveManagementSystem
             AssignBee("Egg Care");
             AssignBee("Honey Manufacturer");
             AssignBee("Nectar Collector");
+        }
+
+        protected void OnPropertyChanged(string name)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
 
         public override decimal CostPerShift
@@ -36,9 +54,10 @@ namespace TheBeeHiveManagementSystem
             {
                 if (!worker.WorkTheNextShift()) missingWork = true;
             }
-            HoneyVault.ConsumeHoney(Constants.HONEY_PER_UNNASSIGNED_WORKER * unnasignedWorkers);
+            HoneyVault.ConsumeHoney(Constants.HONEY_PER_UNASSIGNED_WORKER * unnasignedWorkers);
             UpdateStatusReport(missingWork);
-            return base.WorkTheNextShift();
+            HiveIsRunning = base.WorkTheNextShift();
+            return HiveIsRunning;
         }
 
         private void AddWorker(IWorker worker)
@@ -66,6 +85,8 @@ namespace TheBeeHiveManagementSystem
                     AddWorker(new EggCare(this));
                     break;
             }
+
+            UpdateStatusReport(true);
         }
 
         public void ReportEggConversion(decimal eggsToConvert)
@@ -85,6 +106,11 @@ namespace TheBeeHiveManagementSystem
                 + WorkerStatus("Egg Care");
             StatusReport += $"Total workers: {workers.Length}\n";
             if (missingWork) StatusReport += "WARNING: NOT ALL WORKERS DID THEIR JOBS ";
+
+            OnPropertyChanged("StatusReport");
+            OnPropertyChanged("CanAssignWorkers");
+            OnPropertyChanged("HiveIsRunning");
+            OnPropertyChanged("OutOfHoney");
         }
 
         private string WorkerStatus(string job)
