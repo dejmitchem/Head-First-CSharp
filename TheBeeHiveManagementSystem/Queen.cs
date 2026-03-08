@@ -12,16 +12,9 @@ namespace TheBeeHiveManagementSystem
         private decimal eggs;
         private decimal unnasignedWorkers;
         private bool missingWork;
-        /// <summary>
-        /// Status report text shown in the UI. This is a property so it can be used
-        /// as a binding target from XAML.
-        /// </summary>
+
         public string StatusReport { get; private set; }
 
-        /// <summary>
-        /// Indicates whether the UI should enable the "Assign" button. Exposed as
-        /// a property so it can be bound to the UI and notify on change.
-        /// </summary>
         public bool CanAssignWorkers { get; private set; }
         public bool HiveIsRunning {  get; set; } = true;
         public bool OutOfHoney { get { return !HiveIsRunning; } }

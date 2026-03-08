@@ -4,16 +4,9 @@ using System.Text;
 
 namespace ClownInterfaces
 {
-    internal class FunnyClown : IClown
+    class FunnyClown(string funnyThingIHave) : IClown
     {
-        private string funnyThingIHave;
-
         public string FunnyThingIHave { get { return funnyThingIHave; }}
-
-        public FunnyClown(string funnyThingIHave)
-        {
-            this.funnyThingIHave = funnyThingIHave;
-        }
 
         public void Honk()
         {
