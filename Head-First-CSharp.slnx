@@ -34,6 +34,7 @@
   <Project Path="PickRandomCardsMAUI/PickRandomCardsMAUI.csproj" Id="5173e1ca-1a50-46f8-9bec-9fe037989eac">
     <Deploy Solution="Debug|*" />
   </Project>
+  <Project Path="ShoeCollection/ShoeCollection.csproj" Id="4df54827-cec9-4424-bb05-969065a804a9" />
   <Project Path="Short Test File/Short Test File.csproj" Id="3f13c607-aac2-4e44-b971-6ebc68b4cf58" />
   <Project Path="SloppyJoe/SloppyJoe.csproj" Id="9570e0f0-f4cb-4cf3-878f-9d175d891d69">
     <Deploy Solution="Debug|*" />
