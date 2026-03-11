@@ -9,7 +9,16 @@ List<Duck> ducks = [
     new Duck(13, KindOfDuck.Loon)
     ];
 
-ducks.Sort();
+
+DuckComparer comparer = new DuckComparer();
+
+Console.WriteLine("\nSorting by size then kind\n");
+comparer.SortBy = SortCriteria.SizeThenKind;
+ducks.Sort(comparer);
+PrintDucks(ducks);
+Console.WriteLine("\nSorting by kind then size\n");
+comparer.SortBy = SortCriteria.KindThenSize;
+ducks.Sort(comparer);
 PrintDucks(ducks);
 
 void PrintDucks(List<Duck> ducks)
