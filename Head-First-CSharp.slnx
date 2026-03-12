@@ -6,6 +6,7 @@
   <Project Path="BettingGame/BettingGame.csproj" Id="ca09caa0-bb10-4d43-9815-3d618b2c5493" />
   <Project Path="BirdInheritancePractice/BirdInheritancePractice.csproj" Id="e77c66b3-b60d-40e8-a45c-8241cdb75178" />
   <Project Path="CardClass/CardClass.csproj" Id="0f8738e1-ed02-47be-a859-f97d27534618" />
+  <Project Path="CardShuffler/CardShuffler.csproj" Id="80a15262-046e-4d05-a4a9-b58ed80086cb" />
   <Project Path="ClownInterfaces/ClownInterfaces.csproj" Id="904b193b-8d1b-4f21-a829-a61712663082" />
   <Project Path="DamageCalculator/DamageCalculator.csproj" Id="55d05aa8-1624-4464-8563-e89c42fa2cca" />
   <Project Path="DataBindingDefaultMAUIApp/DataBindingDefaultMAUIApp.csproj" Id="d3ffec6a-9e8a-428a-96b9-6afaa392f2c9">
