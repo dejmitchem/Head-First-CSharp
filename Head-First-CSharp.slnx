@@ -45,4 +45,5 @@
   <Project Path="TheBeeHiveManagementSystem/TheBeeHiveManagementSystem.csproj" Id="dad4d3c4-7617-4be9-b968-64db80c594dd">
     <Deploy Solution="Debug|*" />
   </Project>
+  <Project Path="UpcastingLists/UpcastingLists.csproj" Id="4eb0f3f3-e769-43fc-a9ac-a93caf12841d" />
 </Solution>

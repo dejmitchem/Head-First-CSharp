@@ -25,6 +25,6 @@ void PrintDucks(List<Duck> ducks)
 {
     foreach (var duck in ducks)
     {
-        Console.WriteLine($"{duck.Size} inch {duck.Kind}");
+        Console.WriteLine(duck);
     }
 }

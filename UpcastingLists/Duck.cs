@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DuckList
+namespace UpcastingLists
 {
-    class Duck(int size, KindOfDuck kind) : IComparable<Duck>
+    class Duck(int size, KindOfDuck kind) : Bird, IComparable<Duck>
     {
         public int Size { get { return size; } }
         public KindOfDuck Kind { get { return kind; } }
