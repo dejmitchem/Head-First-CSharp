@@ -26,6 +26,7 @@
   <Project Path="Hi-Lo Game/Hi-Lo Game.csproj" Id="6b497a29-9048-453e-b8f4-5120d4d568c2" />
   <Project Path="Interface Practice/Interface Practice.csproj" Id="007c5e70-1422-4ac0-84c6-2f125f47d75d" />
   <Project Path="IsStatementPractice/IsStatementPractice.csproj" Id="dbdd4e78-ad54-4937-9340-78d417873e3e" />
+  <Project Path="LumberjackFlapjackApp/LumberjackFlapjackApp.csproj" Id="d28d3afd-0067-425e-a825-8ffb4fe0ffba" />
   <Project Path="MAUIDamageCalculator/MAUIDamageCalculator.csproj" Id="0e86b0f1-2e9f-4039-b409-f32a80ee3237">
     <Deploy Solution="Debug|*" />
   </Project>
