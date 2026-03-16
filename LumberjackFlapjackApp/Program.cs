@@ -18,8 +18,7 @@ while (true)
         Lumberjack nextLumberJack = new Lumberjack(name);
         for (int i = 0; i < numFlapjacks; i++)
         {
-            Flapjack flapjack = (Flapjack)Random.Shared.Next(0,4);
-            nextLumberJack.TakeFlapjacks(flapjack);
+            nextLumberJack.TakeFlapjacks((Flapjack)Random.Shared.Next(0, 4));
         }
         lumberjacks.Enqueue(nextLumberJack);
     }

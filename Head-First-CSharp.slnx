@@ -27,6 +27,7 @@
   <Project Path="Interface Practice/Interface Practice.csproj" Id="007c5e70-1422-4ac0-84c6-2f125f47d75d" />
   <Project Path="IsStatementPractice/IsStatementPractice.csproj" Id="dbdd4e78-ad54-4937-9340-78d417873e3e" />
   <Project Path="LumberjackFlapjackApp/LumberjackFlapjackApp.csproj" Id="d28d3afd-0067-425e-a825-8ffb4fe0ffba" />
+  <Project Path="MauiCards/MauiCards.csproj" Id="3a53d84e-cf4a-4f09-954c-f357ae2e8b3f" />
   <Project Path="MAUIDamageCalculator/MAUIDamageCalculator.csproj" Id="0e86b0f1-2e9f-4039-b409-f32a80ee3237">
     <Deploy Solution="Debug|*" />
   </Project>
