@@ -1,14 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MauiCards.MainPage">
+             xmlns:local="clr-namespace:MauiCards"
+             x:Class="MauiCards.MainPage" >
+    <ContentPage.Resources>
+        <local:Deck x:Key="MyCards"/>
+    </ContentPage.Resources>
 
     <ScrollView>
         <VerticalStackLayout>
+            <Label BindingContext="{StaticResource MyCards}"
+                   Text="{Binding Count, StringFormat='There are {0} cards in the deck'}"/>
             <Label x:Name="SelectedCard" Text="No card selected" />
             <Border>
                 <CollectionView x:Name="MyItems" HeightRequest="125" ItemsUpdatingScrollMode="KeepLastItemInView"
-                                SelectionMode="Single" SelectionChanged="MyItems_SelectionChanged"/>
+                                SelectionMode="Single" SelectionChanged="MyItems_SelectionChanged"
+                                ItemsSource="{StaticResource MyCards}"/>
             </Border>
 
             <Button Text="Add an item" Clicked="Button_Clicked" />

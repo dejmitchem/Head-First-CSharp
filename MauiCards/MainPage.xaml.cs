@@ -1,4 +1,5 @@
 ﻿using System.Collections.ObjectModel;
+using System.Reflection;
 using CardClass;
 
 namespace MauiCards
@@ -6,17 +7,24 @@ namespace MauiCards
     public partial class MainPage : ContentPage
     {
 
-        private Deck myItems = new Deck();
+
 
         public MainPage()
         {
             InitializeComponent();
-            MyItems.ItemsSource = myItems;
+
+        }
+
+        private Deck GetDeckFromResources()
+        {
+            if (Resources.TryGetValue("MyCards", out object myCards) && myCards is Deck deck)
+                return deck;
+            else return new Deck();
         }
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-            myItems.Add(
+            GetDeckFromResources().Add(
                 new Card((Suits)Random.Shared.Next(4), (Values)Random.Shared.Next(1, 14)));
         }
 
@@ -29,22 +37,22 @@ namespace MauiCards
 
         private void Shuffle_Clicked(object sender, EventArgs e)
         {
-            myItems.Shuffle();
+            GetDeckFromResources().Shuffle();
         }
 
         private void Sort_Clicked(object sender, EventArgs e)
         {
-            myItems.Sort();
+            GetDeckFromResources().Sort();
         }
 
         private void Reset_Clicked(object sender, EventArgs e)
         {
-            myItems.Reset();
+            GetDeckFromResources().Reset();
         }
 
         private void Clear_Clicked(object sender, EventArgs e)
         {
-            myItems.Clear();
+            GetDeckFromResources().Clear();
         }
     }
 }
