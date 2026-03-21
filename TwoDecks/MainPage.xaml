@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mauiCards="clr-namespace:MauiCards"
+             x:Class="TwoDecks.MainPage">
+
+    <ContentPage.Resources>
+        <mauiCards:Deck x:Key="Deck1"/>
+        <mauiCards:Deck x:Key="Deck2"/>
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <CollectionView x:Name="Deck1" Grid.ColumnSpan="2" BackgroundColor="LightGray" ItemsUpdatingScrollMode="KeepLastItemInView"
+                                SelectionMode="Single" 
+                                ItemsSource="{StaticResource Deck1}"/>
+
+        <Label Grid.Row="1" FontSize="Small" HorizontalOptions="Center" VerticalOptions="Center"
+               BindingContext="{StaticResource Deck1}"
+                   Text="{Binding Count, StringFormat='{0} cards in the deck'}"/>
+        <Button x:Name="MoveCard1" Text="Move Selected Card" Grid.Row="1" Grid.Column="1" Clicked="MoveCard1_Clicked"/>
+        <Button x:Name="Shuffle1" Text="Shuffle" Grid.Row="2" Clicked="Shuffle1_Clicked"/>
+        <Button x:Name="Sort1" Text="Sort" Grid.Row="2" Grid.Column="1" Clicked="Sort1_Clicked"/>
+        <Button x:Name="Reset1" Text="Reset" Grid.Row="3" Clicked="Reset1_Clicked"/>
+        <Button x:Name="Clear1" Text="Clear" Grid.Row="3" Grid.Column="1" Clicked="Clear1_Clicked"/>
+
+        <CollectionView x:Name="Deck2" Grid.Column="2" Grid.ColumnSpan="2" BackgroundColor="LightGray" 
+                                ItemsUpdatingScrollMode="KeepLastItemInView"
+                                SelectionMode="Single" 
+                                ItemsSource="{StaticResource Deck2}"/>
+
+        <Label Grid.Row="1" Grid.Column="2" FontSize="Small" HorizontalOptions="Center" VerticalOptions="Center"
+               BindingContext="{StaticResource Deck2}"
+                   Text="{Binding Count, StringFormat='{0} cards in the deck'}"/>
+        <Button x:Name="MoveCard2" Text="Move Selected Card" Grid.Row="1" Grid.Column="3" Clicked="MoveCard2_Clicked"/>
+        <Button x:Name="Shuffle2" Text="Shuffle" Grid.Row="2" Grid.Column="2" Clicked="Shuffle2_Clicked"/>
+        <Button x:Name="Sort2" Text="Sort"  Grid.Row="2" Grid.Column="3" Clicked="Sort2_Clicked"/>
+        <Button x:Name="Reset2" Text="Reset" Grid.Row="3" Grid.Column="2" Clicked="Reset2_Clicked"/>
+        <Button x:Name="Clear2" Text="Clear" Grid.Row="3" Grid.Column="3" Clicked="Clear2_Clicked"/>
+
+
+    </Grid>
+</ContentPage>
